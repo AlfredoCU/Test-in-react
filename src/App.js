@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import PropTypes from "prop-types";
 
-function App() {
+const App = ({ dev, age, date }) => {
+  // console.log(dev, age, date);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Hola Mundo</h1>
+      <p>React - {dev}</p>
+      <p>Edad: {age}</p>
+      <b>Cumpleaños: {date}</b>
+    </>
   );
-}
+};
+
+//* Las propTypes, nos ayudan a solicitar un tipo de dato en especifico que recibira el componente.
+//* También podemos forzar a que las props sean requeridas o obligatorias.
+App.propTypes = {
+  dev: PropTypes.string.isRequired,
+  age: PropTypes.number,
+  date: PropTypes.string, //* Aunque el valor sea por defecto, se le puede asignar un tipo de dato.
+};
+
+//* Valores por defecto.
+App.defaultProps = {
+  date: "11/02//1997",
+};
 
 export default App;

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prueba a <App /> Prueba a <App /> 1`] = `
+<Fragment>
+  <h1>
+    Hola Mundo
+  </h1>
+  <p>
+    React - 
+    Alfredo CU
+  </p>
+  <p>
+    Edad: 
+    23
+  </p>
+  <b>
+    Cumpleaños: 
+    11/02//1997
+  </b>
+</Fragment>
+`;
